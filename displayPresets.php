@@ -3,7 +3,7 @@
 	$presets = array_filter(explode("\n", $contents));
 	foreach($presets as $index => $preset) {
 		echo '<div class="preset v-align">';
-		echo '<div class="btn btn-outline-primary btn-xs preset-select v-align">Select</div>';
+		echo '<div class="setting-input btn btn-outline-primary btn-xs preset-select v-align">Select</div>';
 		$colors = array_filter(explode(' ', $preset));
 		foreach($colors as $color) {
 			echo '<div class="preset-color" style="background-color: #'.$color.';"></div>';

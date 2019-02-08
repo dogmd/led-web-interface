@@ -1,6 +1,7 @@
 // From: https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
 // Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8765');
+const serverIP = '192.168.8.158';
+const socket = new WebSocket('ws://' + serverIP + ':8765');
 
 state = {changeStatus: false};
 
@@ -10,13 +11,14 @@ socket.addEventListener('open', function (event) {
 });
 
 socket.addEventListener('close', function(event) {
-    console.log(event.code);
+    console.log('Websocket disconnected with code: ' + event.code);
 });
 
 // Listen for messages (update the DOM)
 socket.addEventListener('message', function (event) {
     state = JSON.parse(event.data);
     updateDOM();
+    startAutoUpdate();
 });
 
 function parseDOM() {
@@ -59,8 +61,32 @@ function updateDOM() {
         $('#power-switch').val(state.powerSettings.isOn);
         $('#power-switch').click();
     }
-    console.log(state.powerSettings.brightness);
     $('#brightness-slider').slider('setValue', state.powerSettings.brightness);
+    
+    effects = state.effects;
+
+    $('.global-effect, .effect-option').each(function() {
+        effectName = $(this).attr('id');
+        if ($(this).val() != effects[effectName].selected) {
+            $(this).click();
+        }
+    });
+
+    $('#presets .preset').eq(effects.custom.index).children().first().click();
+
+    effectNames = Object.keys(effects).forEach(function (effectName) {
+        Object.keys(effects[effectName]).forEach(function (settingName) {
+            settingId = '#' + effectName + '-setting-' + settingName;
+            settingVal = effects[effectName][settingName];
+            
+            $(settingId + ' input.setting-input').slider('setValue', settingVal);
+            $(settingId + ' .button-checkbox.setting-input').each(function() {
+                if ($(this).val() != settingVal) {
+                    $(this).click();
+                }
+            });
+        });
+    });
 }
 
 function requestStatus() {
@@ -77,4 +103,13 @@ function updateStatus() {
 
 function sendState() {
     socket.send(JSON.stringify(state));
+}
+
+function startAutoUpdate() {
+    $('.setting-input, #brightness-slider').each(function() {
+        if ($(this).attr('data-slider-id')) {
+            $('#' + $(this).attr('data-slider-id')).click(updateStatus);
+        }
+    });
+    $('.effect-option, .global-effect, .setting-input, #brightness-slider, #power-switch').click(updateStatus);
 }

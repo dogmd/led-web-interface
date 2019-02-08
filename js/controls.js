@@ -14,7 +14,7 @@ $('.collapse-toggle').click(function () {
 $('#solid-color-red-slider, #solid-color-green-slider, #solid-color-blue-slider').change(function (event) {
     manageColor('#solid-color');
 });
-$('#solid-color-setting-toggle').click(function (event) {
+$('#solid-color-settings-toggle').click(function (event) {
     manageColor('#solid-color');
 });
 $('#solid-color-color-selector').on('input', function (event) {
@@ -25,7 +25,7 @@ $('#solid-color-color-selector').on('input', function (event) {
 $('#runner-red-slider, #runner-green-slider, #runner-blue-slider').change(function (event) {
     manageColor('#runner');
 });
-$('#runner-setting-toggle').click(function (event) {
+$('#runner-settings-toggle').click(function (event) {
     manageColor('#runner');
 });
 $('#runner-color-selector').on('input', function (event) {
@@ -36,7 +36,7 @@ $('#runner-color-selector').on('input', function (event) {
 $('#wipe-red-slider, #wipe-green-slider, #wipe-blue-slider').change(function (event) {
     manageColor('#wipe');
 });
-$('#wipe-setting-toggle').click(function (event) {
+$('#wipe-settings-toggle').click(function (event) {
     manageColor('#wipe');
 });
 $('#wipe-color-selector').on('input', function (event) {
@@ -186,6 +186,10 @@ function presetDeleteListener() {
       data: { action:'delete', id: toDelete }
     });
     $('.preset').eq(toDelete).remove();
+    if (toDelete == state.effects.custom.index) {
+        state.effects.custom = {};
+        updateStatus();
+    }
   });
 }
 presetDeleteListener();
