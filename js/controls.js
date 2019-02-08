@@ -72,13 +72,13 @@ function manageColor(effectPrefix) {
 }
 
 // From https://stackoverflow.com/questions/1740700/how-to-get-hex-color-value-rather-than-rgb-value
-function rgb2hex(rgb) {
+function rgb2hex(rgb, hashtag='#') {
     rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 
     function hex(x) {
         return ("0" + parseInt(x).toString(16)).slice(-2);
     }
-    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    return hashtag + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
 }
 
 // From https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
@@ -90,10 +90,14 @@ function hex2rgb(hex) {
         b: parseInt(result[3], 16)
     } : null;
 }
+
+$('#solid-color').val(true);
+
 function radioButtons(radioClass, clicked) {
     // Get rid of all toggled state 
     $(radioClass).each(function () {
         $(this).removeAttr('selected');
+        $(this).val(false);
         var classes = $(this).attr('class');
         classes = classes.replace('btn-primary', 'btn-outline-primary');
         $(this).attr('class', classes);
@@ -104,20 +108,30 @@ function radioButtons(radioClass, clicked) {
     classes = classes.replace('btn-outline-primary', 'btn-primary');
     clicked.attr('class', classes);
     clicked.attr('selected', '');
+    clicked.val(true);
 };
 
 // Turn buttons into radio buttons
 $('.effect-option').click(function() { radioButtons('.effect-option', $(this)); });
 $('.preset-select').click(function() { radioButtons('.preset-select', $(this)); });
 
+$('.button-checkbox').each(function () {
+    if ($(this).attr('checked')) {
+        $(this).val(true);
+    } else {
+        $(this).val(false);
+    }
+});
 // Turn buttons into checkboxes
 $('.button-checkbox').click(function () {
     if ($(this).attr('checked')) {
         $(this).removeAttr('checked');
+        $(this).val(false);
         $(this).removeClass('btn-primary');
         $(this).addClass('btn-outline-primary');
     } else {
         $(this).attr('checked', '');
+        $(this).val(true);
         $(this).removeClass('btn-outline-primary');
         $(this).addClass('btn-primary');
     }
@@ -171,7 +185,6 @@ function presetDeleteListener() {
       url: '/editPresets.php',
       data: { action:'delete', id: toDelete }
     });
-    console.log(toDelete);
     $('.preset').eq(toDelete).remove();
   });
 }
@@ -182,3 +195,13 @@ function newPresetColorListener() {
     $(this).parent().css('background-color', event.target.value);
   });
 }
+
+$('#power-switch').val(false);
+
+$('#power-control label').click(function() {
+    if ($('#power-switch').val() === "true") {
+        $('#power-switch').val(false);
+    } else {
+        $('#power-switch').val(true);
+    }
+});

@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<?php
-    include 'statusControl.php';
-
-    $descriptorspec = array(
-       0 => array("pipe", "r"),  // stdin is a pipe that the child will read from
-       1 => array("pipe", "w"),  // stdout is a pipe that the child will write to
-       2 => array("file", "/tmp/error-output.txt", "a") // stderr is a file to write to
-    );
-
-    $status_handler = proc_open('python ../ServerWebsocket.py', $descriptorspec, $pipes);
-?>
-
 <head>
     <!-- Add jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
@@ -71,7 +59,7 @@
             </div>
             <div class="col-md-4">
                 <button type="button" class="btn btn-primary btn-lg btn-block effect-option" id="solid-color" selected="selected">Solid Color</button>
-                <a href="#solid-color-settings" class="collapse-toggle" id="solid-color-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <a href="#solid-color-settings" class="collapse-toggle" id="solid-color-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
                 <div class="collapse effect-settings" id="solid-color-settings" for="solid-color">
                     <div class="more-info">
                         <a href="#solid-color-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -81,15 +69,15 @@
                     </div>
                     <div id="solid-color-setting-red">
                         <span class="lead setting-title">Red Value: </span>
-                        <input id="solid-color-red-slider" data-slider-id='solidColorRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="251" />
+                        <input class="setting-input" id="solid-color-red-slider" data-slider-id='solidColorRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="251" />
                     </div>
                     <div id="solid-color-setting-green">
                         <span class="lead setting-title">Green Value: </span>
-                        <input id="solid-color-green-slider" data-slider-id='solidColorGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="238" />
+                        <input class="setting-input" id="solid-color-green-slider" data-slider-id='solidColorGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="238" />
                     </div>
                     <div id="solid-color-setting-blue">
                         <span class="lead setting-title">Blue Value: </span>
-                        <input id="solid-color-blue-slider" data-slider-id='solidColorBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="228" />
+                        <input class="setting-input" id="solid-color-blue-slider" data-slider-id='solidColorBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="228" />
                     </div>
                     <div id="solid-color-preview" class="v-align">
                         <span class="lead setting-title">Preview: </span>
@@ -101,7 +89,7 @@
             </div>
             <div class="col-md-4">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="rainbow">Rainbow</button>
-                <a href="#rainbow-settings" class="collapse-toggle" id="rainbow-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <a href="#rainbow-settings" class="collapse-toggle" id="rainbow-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
                 <div class="collapse effect-settings" id="rainbow-settings" for="rainbow">
                     <div class="more-info">
                         <a href="#rainbow-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -111,20 +99,20 @@
                     </div>
                     <div id="rainbow-setting-frequency">
                         <span class="lead setting-title">Frequency: </span>
-                        <input id="rainbow-frequency-slider" data-slider-id='rainbowFrequencySlider' type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="3" />
+                        <input class="setting-input" id="rainbow-frequency-slider" data-slider-id='rainbowFrequencySlider' type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="3" />
                     </div>
                     <div id="rainbow-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input id="rainbow-speed-slider" data-slider-id='rainbowSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="8" />
+                        <input class="setting-input" id="rainbow-speed-slider" data-slider-id='rainbowSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="8" />
                     </div>
                     <div id="rainbow-setting-solid-strip">
-                        <button type="button" class="btn btn-outline-primary btn-block button-checkbox" id="rainbow-solid-strip">Solid Strip</button>
+                        <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="rainbow-solid-strip">Solid Strip</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="snow">Snow</button>
-                <a href="#snow-settings" class="collapse-toggle" id="snow-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <a href="#snow-settings" class="collapse-toggle" id="snow-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
                 <div class="collapse effect-settings" id="snow-settings" for="snow">
                     <div class="more-info">
                         <a href="#snow-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -134,11 +122,11 @@
                     </div>
                     <div id="snow-setting-frequency">
                         <span class="lead setting-title">Frequency: </span>
-                        <input id="snow-frequency-slider" data-slider-id='snowFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
+                        <input class="setting-input" id="snow-frequency-slider" data-slider-id='snowFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
                     </div>
                     <div id="snow-setting-gravity">
                         <span class="lead setting-title">Gravity: </span>
-                        <input id="snow-gravity-slider" data-slider-id='snowGravitySlider' type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="2" />
+                        <input class="setting-input" id="snow-gravity-slider" data-slider-id='snowGravitySlider' type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="2" />
                     </div>
                 </div>
             </div>
@@ -163,7 +151,7 @@
             </div-->
             <div class="col-md-4">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="runner">Runner</button>
-                <a href="#runner-settings" class="collapse-toggle" id="runner-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <a href="#runner-settings" class="collapse-toggle" id="runner-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
                 <div class="collapse effect-settings" id="runner-settings" for="runner">
                     <div class="more-info">
                         <a href="#runner-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -173,23 +161,23 @@
                     </div>
                     <div id="runner-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input id="runner-speed-slider" data-slider-id='runnerSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+                        <input class="setting-input" id="runner-speed-slider" data-slider-id='runnerSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
                     </div>
                     <div id="runner-setting-length">
                         <span class="lead setting-title">Length: </span>
-                        <input id="runner-length-slider" data-slider-id='runnerLengthSlider' type="text" data-slider-min="1" data-slider-max="80" data-slider-step="1" data-slider-value="25" />
+                        <input class="setting-input" id="runner-length-slider" data-slider-id='runnerLengthSlider' type="text" data-slider-min="1" data-slider-max="80" data-slider-step="1" data-slider-value="25" />
                     </div>
                     <div id="runner-setting-red">
                         <span class="lead setting-title">Red Value: </span>
-                        <input id="runner-red-slider" data-slider-id='runnerRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="120" />
+                        <input class="setting-input" id="runner-red-slider" data-slider-id='runnerRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="120" />
                     </div>
                     <div id="runner-setting-green">
                         <span class="lead setting-title">Green Value: </span>
-                        <input id="runner-green-slider" data-slider-id='runnerGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="81" />
+                        <input class="setting-input" id="runner-green-slider" data-slider-id='runnerGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="81" />
                     </div>
                     <div id="runner-setting-blue">
                         <span class="lead setting-title">Blue Value: </span>
-                        <input id="runner-blue-slider" data-slider-id='runnerBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="169" />
+                        <input class="setting-input" id="runner-blue-slider" data-slider-id='runnerBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="169" />
                     </div>
                     <div id="runner-color-preview" class="v-align">
                         <span class="lead setting-title">Preview: </span>
@@ -201,7 +189,7 @@
             </div>
             <div class="col-md-4">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="wipe">Color Wipe</button>
-                <a href="#wipe-settings" class="collapse-toggle" id="wipe-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <a href="#wipe-settings" class="collapse-toggle" id="wipe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
                 <div class="collapse effect-settings" id="wipe-settings" for="wipe">
                     <div class="more-info">
                         <a href="#wipe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -211,19 +199,19 @@
                     </div>
                     <div id="wipe-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+                        <input class="setting-input" id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
                     </div>
                     <div id="wipe-setting-red">
                         <span class="lead setting-title">Red Value: </span>
-                        <input id="wipe-red-slider" data-slider-id='wipeRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="120" />
+                        <input class="setting-input" id="wipe-red-slider" data-slider-id='wipeRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="120" />
                     </div>
                     <div id="wipe-setting-green">
                         <span class="lead setting-title">Green Value: </span>
-                        <input id="wipe-green-slider" data-slider-id='wipeGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="81" />
+                        <input class="setting-input" id="wipe-green-slider" data-slider-id='wipeGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="81" />
                     </div>
                     <div id="wipe-setting-blue">
                         <span class="lead setting-title">Blue Value: </span>
-                        <input id="wipe-blue-slider" data-slider-id='wipeBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="169" />
+                        <input class="setting-input" id="wipe-blue-slider" data-slider-id='wipeBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="169" />
                     </div>
                     <div id="wipe-color-preview" class="v-align">
                         <span class="lead setting-title">Preview: </span>
@@ -235,7 +223,7 @@
             </div>
             <div class="col-md-4">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="custom">Custom Colors</button>
-                <a href="#custom-settings" class="collapse-toggle" id="custom-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <a href="#custom-settings" class="collapse-toggle" id="custom-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
                 <div class="collapse effect-settings" id="custom-settings" for="custom">
                     <div class="more-info">
                         <a href="#custom-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -256,7 +244,7 @@
           </div>
           <div class="col-md-4">
               <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="twinkle">Twinkle</button>
-              <a href="#twinkle-settings" class="collapse-toggle" id="twinkle-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+              <a href="#twinkle-settings" class="collapse-toggle" id="twinkle-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
               <div class="collapse effect-settings" id="twinkle-settings" for="twinkle">
                   <div class="more-info">
                       <a href="#twinkle-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -266,13 +254,13 @@
                   </div>
                   <div id="twinkle-setting-frequency">
                       <span class="lead setting-title">Frequency: </span>
-                      <input id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
+                      <input class="setting-input" id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
                   </div>
               </div>
           </div>
           <div class="col-md-4">
               <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="breathe">Breathe</button>
-              <a href="#breathe-settings" class="collapse-toggle" id="breathe-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+              <a href="#breathe-settings" class="collapse-toggle" id="breathe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
               <div class="collapse effect-settings" id="breathe-settings" for="breathe">
                   <div class="more-info">
                       <a href="#breathe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -282,13 +270,13 @@
                   </div>
                   <div id="breathe-setting-speed">
                       <span class="lead setting-title">Speed: </span>
-                      <input id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="3" data-slider-step="0.1" data-slider-value="1" />
+                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="3" data-slider-step="0.1" data-slider-value="1" />
                   </div>
               </div>
           </div>
           <div class="col-md-4">
               <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="blink">Blink</button>
-              <a href="#blink-settings" class="collapse-toggle" id="blink-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+              <a href="#blink-settings" class="collapse-toggle" id="blink-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
               <div class="collapse effect-settings" id="blink-settings" for="blink">
                   <div class="more-info">
                       <a href="#blink-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
@@ -298,11 +286,11 @@
                   </div>
                   <div id="blink-setting-off-time">
                       <span class="lead setting-title">Off time: </span>
-                      <input id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.25" />
+                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.25" />
                   </div>
                   <div id="blink-setting-on-time">
                       <span class="lead setting-title">On time: </span>
-                      <input id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.5" />
+                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.5" />
                   </div>
               </div>
           </div>
@@ -332,19 +320,14 @@
             <button class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
             <button id="remove-all" class="btn btn-outline-danger">Remove All</button>
             <button id="randomize-colors" class="btn btn-outline-primary">Randomize</button>
-            <button id="add-new-preset" type="button" class="btn btn-outline-success" data-dismiss="modal">Add</button>
+            <button id="add-new-preset" type="button" class="btn btn-outline-success" data-dismiss="modal">Save</button>
           </div>
         </div>
       </div>
     </div>
-    
+
     <script src="js/sliders.js"></script>
     <script src="js/controls.js"></script>
     <script src="js/websocket.js"></script>
 </body>
-
-<?php
-    get_status($pipes);
-?>
-
 </html>
