@@ -1,0 +1,149 @@
+.application-title {
+    text-align: center;
+}
+
+.switch-label {
+    margin: 0 10px;
+}
+
+.lead {
+    margin: 0px 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+#power-brightness {
+    margin: auto;
+}
+
+#power-control {
+    display: inline-block;
+    margin: auto;
+}
+
+.category-header {
+    display: block;
+    width: 100%;
+    border-top-width: 1px;
+    border-top-color: #CCC;
+    border-top-style: solid;
+    padding-top: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#brightness-control {
+    display: inline-block;
+    margin: auto;
+}
+
+.slider-title {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.tooltip.tooltip-main.top.in,
+.tooltip.tooltip-main.top.in .tooltip-arrow,
+.tooltip.tooltip-main.top.in .tooltip-inner {
+    opacity: 0.9;
+}
+
+.slider-selection {
+    background: #BABABA;
+}
+
+#effects > div {
+    margin-bottom: 15px;
+}
+
+.collapse-toggle {
+    color: #868686;
+    font-size: 14px;
+}
+
+.setting-title {
+    width: 120px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.slider.slider-horizontal {
+    width: 190px;
+}
+
+.color-selector {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-color: #333;
+    border-width: 1px;
+    opacity: 0;
+}
+
+.color-selector-bg {
+    margin-left: 4px;
+}
+
+.v-align {
+    display: flex;
+    align-items: center;
+}
+
+.effect-settings {
+    padding: 0 10px;
+}
+
+.slider-handle {
+    background-color: #007bff;
+    background-image: linear-gradient(to bottom, #007bff 0, #337ab7 100%);
+}
+
+.button-checkbox.btn-outline-primary:hover {
+    background-color: white;
+    color: #007BFF;
+}
+
+.button-checkbox:not(.global-effect) {
+    font-size: 16px;
+    border-radius: 50px;
+    margin: 5px 0;
+}
+
+.preset {
+  margin: 5px 0;
+}
+
+.preset-select {
+  margin-right: 5px;
+  height: 32px;
+}
+
+.preset-color {
+  width: 16px;
+  height: 32px;
+  display: inline-block;
+}
+
+.preset-delete {
+  margin-left: 5px;
+}
+
+.btn {
+  border-radius: 999px;
+}
+
+#new-preset-colors {
+  text-align: center;
+}
+
+.new-preset-color {
+  width: 75%;
+  opacity: 0;
+}
+
+.center {
+  height: 98vh;
+}
