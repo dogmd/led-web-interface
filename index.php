@@ -124,7 +124,7 @@
                         <span class="lead setting-title">Frequency: </span>
                         <input class="setting-input" id="snow-frequency-slider" data-slider-id='snowFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
                     </div>
-                    <div id="snow-setting-gravity">
+                    <div id="snow-setting-duration">
                         <span class="lead setting-title">Duration: </span>
                         <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="2" />
                     </div>
