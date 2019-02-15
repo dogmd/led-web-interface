@@ -1,6 +1,6 @@
 // From: https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
 // Create WebSocket connection.
-const serverIP = 'localhost';
+const serverIP = '192.168.8.180';
 const socket = new WebSocket('ws://' + serverIP + ':8765');
 
 state = {changeStatus: false};
