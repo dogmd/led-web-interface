@@ -27,9 +27,9 @@ $('#snow-frequency-slider').slider({
         return value * 100 + '%'
     }
 });
-$('#snow-gravity-slider').slider({
+$('#snow-duration-slider').slider({
     formatter: function (value) {
-        return value + ' px/s'
+        return value + ' s'
     }
 });
 

@@ -117,7 +117,7 @@
                     <div class="more-info">
                         <a href="#snow-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
                         <div class="collapse" id="snow-info">
-                            <p>White snow drifts down through the strands. Change frequency slider to make snow more likely, and the gravity slider to change how quickly the snow falls.</p>
+                            <p>White snow drifts down through the strands. Change frequency slider to make snow more likely, and the duration slider to change how long it lingers</p>
                         </div>
                     </div>
                     <div id="snow-setting-frequency">
@@ -125,8 +125,8 @@
                         <input class="setting-input" id="snow-frequency-slider" data-slider-id='snowFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
                     </div>
                     <div id="snow-setting-gravity">
-                        <span class="lead setting-title">Gravity: </span>
-                        <input class="setting-input" id="snow-gravity-slider" data-slider-id='snowGravitySlider' type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="2" />
+                        <span class="lead setting-title">Duration: </span>
+                        <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="2" />
                     </div>
                 </div>
             </div>

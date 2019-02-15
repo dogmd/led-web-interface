@@ -11,7 +11,7 @@ socket.addEventListener('open', function (event) {
 });
 
 socket.addEventListener('close', function(event) {
-    console.log('Websocket disconnected with code: ' + event.code);
+    alert('Connection to websocket closed with code ' + event.code);
 });
 
 // Listen for messages (update the DOM)
