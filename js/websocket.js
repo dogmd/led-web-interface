@@ -67,7 +67,7 @@ function updateDOM() {
 
     $('.global-effect, .effect-option').each(function() {
         effectName = $(this).attr('id');
-        if ($(this).val() != effects[effectName].selected) {
+        if ($(this).val() && $(this).val() != effects[effectName].selected) {
             $(this).click();
         }
     });
