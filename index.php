@@ -130,25 +130,6 @@
                     </div>
                 </div>
             </div>
-            <!--div class="col-md-4">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="patriot">Patriot</button>
-                <a href="#patriot-settings" class="collapse-toggle" id="patriot-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
-                <div class="collapse effect-settings" id="patriot-settings" for="patriot">
-                    <div class="more-info">
-                        <a href="#patriot-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
-                        <div class="collapse" id="patriot-info">
-                            <p>Celebrate your favorite country that has a flag colored red, white, and blue! If solid strand is selected, each strand is a solid color, otherwise it is spotted with red white or blue. If speed is not 0, the colors move down the LED strip.</p>
-                        </div>
-                    </div>
-                    <div id="patriot-setting-speed">
-                        <span class="lead setting-title">Speed: </span>
-                        <input id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="0" />
-                    </div>
-                    <div id="patriot-setting-solid-strand">
-                        <button type="button" class="btn btn-outline-primary btn-block button-checkbox" id="patriot-solid-strand">Solid Strand</button>
-                    </div>
-                </div>
-            </div-->
             <div class="col-md-4">
                 <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="runner">Runner</button>
                 <a href="#runner-settings" class="collapse-toggle" id="runner-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
@@ -188,36 +169,21 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="wipe">Color Wipe</button>
-                <a href="#wipe-settings" class="collapse-toggle" id="wipe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
-                <div class="collapse effect-settings" id="wipe-settings" for="wipe">
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="patriot">Patriot</button>
+                <a href="#patriot-settings" class="collapse-toggle" id="patriot-setting-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+                <div class="collapse effect-settings" id="patriot-settings" for="patriot">
                     <div class="more-info">
-                        <a href="#wipe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
-                        <div class="collapse" id="wipe-info">
-                            <p>The selected color moves across the strip, and then fades back to black. Change the speed slider to select how fast it does this. Click on preview to bring up a color selector.</p>
+                        <a href="#patriot-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
+                        <div class="collapse" id="patriot-info">
+                            <p>Celebrate your favorite country that has a flag colored red, white, and blue! If solid strand is selected, each strand is a solid color, otherwise it is spotted with red white or blue. If speed is not 0, the colors move down the LED strip.</p>
                         </div>
                     </div>
-                    <div id="wipe-setting-speed">
+                    <div id="patriot-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input class="setting-input" id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+                        <input class="setting-input" id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="0" />
                     </div>
-                    <div id="wipe-setting-red">
-                        <span class="lead setting-title">Red Value: </span>
-                        <input class="setting-input" id="wipe-red-slider" data-slider-id='wipeRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="120" />
-                    </div>
-                    <div id="wipe-setting-green">
-                        <span class="lead setting-title">Green Value: </span>
-                        <input class="setting-input" id="wipe-green-slider" data-slider-id='wipeGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="81" />
-                    </div>
-                    <div id="wipe-setting-blue">
-                        <span class="lead setting-title">Blue Value: </span>
-                        <input class="setting-input" id="wipe-blue-slider" data-slider-id='wipeBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="169" />
-                    </div>
-                    <div id="wipe-color-preview" class="v-align">
-                        <span class="lead setting-title">Preview: </span>
-                        <div class="color-selector-bg" id="wipe-color-selector-bg">
-                            <input type="color" class="color-selector" id="wipe-color-selector" value="#7851A9">
-                        </div>
+                    <div id="patriot-setting-solid-strand">
+                        <button type="button" class="btn btn-outline-primary btn-block button-checkbox" id="patriot-solid-strand">Solid Strand</button>
                     </div>
                 </div>
             </div>
@@ -294,6 +260,40 @@
                   </div>
               </div>
           </div>
+	    	<div class="offset-md-4 col-md-4">
+	    		<button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="wipe">Color Wipe</button>
+	    		<a href="#wipe-settings" class="collapse-toggle" id="wipe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+	    		<div class="collapse effect-settings" id="wipe-settings" for="wipe">
+	    			<div class="more-info">
+	    				<a href="#wipe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
+	    				<div class="collapse" id="wipe-info">
+	    					<p>The selected color moves across the strip, and then fades back to black. Change the speed slider to select how fast it does this. Click on preview to bring up a color selector.</p>
+	    				</div>
+	    			</div>
+	    			<div id="wipe-setting-speed">
+	    				<span class="lead setting-title">Speed: </span>
+	    				<input class="setting-input" id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+	    			</div>
+	    			<div id="wipe-setting-red">
+	    				<span class="lead setting-title">Red Value: </span>
+	    				<input class="setting-input" id="wipe-red-slider" data-slider-id='wipeRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="120" />
+	    			</div>
+	    			<div id="wipe-setting-green">
+	    				<span class="lead setting-title">Green Value: </span>
+	    				<input class="setting-input" id="wipe-green-slider" data-slider-id='wipeGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="81" />
+	    			</div>
+	    			<div id="wipe-setting-blue">
+	    				<span class="lead setting-title">Blue Value: </span>
+	    				<input class="setting-input" id="wipe-blue-slider" data-slider-id='wipeBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="169" />
+	    			</div>
+	    			<div id="wipe-color-preview" class="v-align">
+	    				<span class="lead setting-title">Preview: </span>
+	    				<div class="color-selector-bg" id="wipe-color-selector-bg">
+	    					<input type="color" class="color-selector" id="wipe-color-selector" value="#7851A9">
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
         </div>
     </div>
 
