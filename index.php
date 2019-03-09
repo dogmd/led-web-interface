@@ -122,11 +122,11 @@
                     </div>
                     <div id="snow-setting-frequency">
                         <span class="lead setting-title">Frequency: </span>
-                        <input class="setting-input" id="snow-frequency-slider" data-slider-id='snowFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
+                        <input class="setting-input" id="snow-frequency-slider" data-slider-id='snowFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.05" data-slider-value="0.5" />
                     </div>
                     <div id="snow-setting-duration">
                         <span class="lead setting-title">Duration: </span>
-                        <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="2" />
+                        <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="2" />
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@
                         <input class="setting-input" id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="0" />
                     </div>
                     <div id="patriot-setting-solid-strand">
-                        <button type="button" class="btn btn-outline-primary btn-block button-checkbox" id="patriot-solid-strand">Solid Strand</button>
+                        <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="patriot-solid-strand">Solid Strand</button>
                     </div>
                 </div>
             </div>
