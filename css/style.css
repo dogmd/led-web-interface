@@ -54,7 +54,7 @@
     background: #BABABA;
 }
 
-#effects > div {
+#effects > div, #global-effects > div {
     margin-bottom: 15px;
 }
 

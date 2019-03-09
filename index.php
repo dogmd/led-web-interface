@@ -208,60 +208,8 @@
           <div class="category-header">
             <h3>Global Effect Controls</h3>
           </div>
-          <div class="col-md-4">
-              <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="twinkle">Twinkle</button>
-              <a href="#twinkle-settings" class="collapse-toggle" id="twinkle-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
-              <div class="collapse effect-settings" id="twinkle-settings" for="twinkle">
-                  <div class="more-info">
-                      <a href="#twinkle-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
-                      <div class="collapse" id="twinkle-info">
-                          <p>Your strip twinkles, change the frequency slider to change how often it does.</p>
-                      </div>
-                  </div>
-                  <div id="twinkle-setting-frequency">
-                      <span class="lead setting-title">Frequency: </span>
-                      <input class="setting-input" id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="breathe">Breathe</button>
-              <a href="#breathe-settings" class="collapse-toggle" id="breathe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
-              <div class="collapse effect-settings" id="breathe-settings" for="breathe">
-                  <div class="more-info">
-                      <a href="#breathe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
-                      <div class="collapse" id="breathe-info">
-                          <p>The brightness of your strip breathes between your set brightness and 0, change the speed slider to change how fast it does this.</p>
-                      </div>
-                  </div>
-                  <div id="breathe-setting-speed">
-                      <span class="lead setting-title">Speed: </span>
-                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="3" data-slider-step="0.1" data-slider-value="1" />
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="blink">Blink</button>
-              <a href="#blink-settings" class="collapse-toggle" id="blink-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
-              <div class="collapse effect-settings" id="blink-settings" for="blink">
-                  <div class="more-info">
-                      <a href="#blink-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
-                      <div class="collapse" id="blink-info">
-                          <p>Your strip blinks on and off, off time changes how long the strip stays off when it blinks, on time changes how long it stays on between blinks</p>
-                      </div>
-                  </div>
-                  <div id="blink-setting-off-time">
-                      <span class="lead setting-title">Off time: </span>
-                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.25" />
-                  </div>
-                  <div id="blink-setting-on-time">
-                      <span class="lead setting-title">On time: </span>
-                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.5" />
-                  </div>
-              </div>
-          </div>
-	    	<div class="offset-md-4 col-md-4">
-	    		<button type="button" class="btn btn-outline-primary btn-lg btn-block effect-option" id="wipe">Color Wipe</button>
+	    	<div class="col-md-4">
+	    		<button type="button" class="btn btn-outline-primary btn-lg btn-block global-effect button-checkbox" id="wipe">Color Wipe</button>
 	    		<a href="#wipe-settings" class="collapse-toggle" id="wipe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
 	    		<div class="collapse effect-settings" id="wipe-settings" for="wipe">
 	    			<div class="more-info">
@@ -294,6 +242,58 @@
 	    			</div>
 	    		</div>
 	    	</div>
+          <div class="col-md-4">
+              <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="twinkle">Twinkle</button>
+              <a href="#twinkle-settings" class="collapse-toggle" id="twinkle-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+              <div class="collapse effect-settings" id="twinkle-settings" for="twinkle">
+                  <div class="more-info">
+                      <a href="#twinkle-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
+                      <div class="collapse" id="twinkle-info">
+                          <p>Your strip twinkles, change the frequency slider to change how often it does.</p>
+                      </div>
+                  </div>
+                  <div id="twinkle-setting-frequency">
+                      <span class="lead setting-title">Frequency: </span>
+                      <input class="setting-input" id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="breathe">Breathe</button>
+              <a href="#breathe-settings" class="collapse-toggle" id="breathe-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+              <div class="collapse effect-settings" id="breathe-settings" for="breathe">
+                  <div class="more-info">
+                      <a href="#breathe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
+                      <div class="collapse" id="breathe-info">
+                          <p>The brightness of your strip breathes between your set brightness and 0, change the speed slider to change how fast it does this.</p>
+                      </div>
+                  </div>
+                  <div id="breathe-setting-speed">
+                      <span class="lead setting-title">Speed: </span>
+                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="3" data-slider-step="0.1" data-slider-value="1" />
+                  </div>
+              </div>
+          </div>
+          <div class="offset-md-4 col-md-4">
+              <button type="button" class="btn btn-outline-primary btn-lg btn-block button-checkbox global-effect" id="blink">Blink</button>
+              <a href="#blink-settings" class="collapse-toggle" id="blink-settings-toggle" data-toggle="collapse">Effect Settings <i class="fas fa-angle-right"></i></a>
+              <div class="collapse effect-settings" id="blink-settings" for="blink">
+                  <div class="more-info">
+                      <a href="#blink-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
+                      <div class="collapse" id="blink-info">
+                          <p>Your strip blinks on and off, off time changes how long the strip stays off when it blinks, on time changes how long it stays on between blinks</p>
+                      </div>
+                  </div>
+                  <div id="blink-setting-off-time">
+                      <span class="lead setting-title">Off time: </span>
+                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.25" />
+                  </div>
+                  <div id="blink-setting-on-time">
+                      <span class="lead setting-title">On time: </span>
+                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.5" />
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
 

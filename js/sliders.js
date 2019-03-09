@@ -34,11 +34,11 @@ $('#snow-duration-slider').slider({
 });
 
 // Patriot sliders
-//$('#patriot-speed-slider').slider({
-//    formatter: function (value) {
-//        return value + ' px/s'
-//    }
-//});
+$('#patriot-speed-slider').slider({
+    formatter: function (value) {
+        return value + ' px/s'
+    }
+});
 
 // Runner sliders
 $('#runner-speed-slider').slider({
