@@ -53,6 +53,7 @@ function manageColorSliders(effectPrefix, event) {
     greenSlider.slider('setValue', rgb.g);
     blueSlider.slider('setValue', rgb.b);
     $(effectPrefix + '-color-selector-bg').css('background-color', event.target.value);
+	updateStatus();
 }
 
 // Changes the preview square in solid color settings
