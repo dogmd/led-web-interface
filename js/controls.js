@@ -161,7 +161,8 @@ $('#add-new-preset').click(function() {
     success: function(html) {
       $('#presets').html(html);
       presetDeleteListener();
-      $('.preset-select').click(function() { radioButtons('.preset-select', $(this)); });
+      $('.preset-select').click(function() { radioButtons('.preset-select', $(this)); updateStatus(); });
+	  $('.preset-select').last().click();
     }
   });
 });
