@@ -61,6 +61,11 @@ $('#wipe-speed-slider').slider({
         return value + ' px/s'
     }
 });
+$('#wipe-length-slider').slider({
+    formatter: function (value) {
+        return value + ' px'
+    }
+});
 $('#wipe-red-slider').slider();
 $('#wipe-green-slider').slider();
 $('#wipe-blue-slider').slider();

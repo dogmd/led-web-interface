@@ -215,12 +215,16 @@
 	    			<div class="more-info">
 	    				<a href="#wipe-info" class="collapse-toggle" data-toggle="collapse">More Info <i class="fas fa-angle-right"></i></a>
 	    				<div class="collapse" id="wipe-info">
-	    					<p>The selected color moves across the strip, and then fades back to black. Change the speed slider to select how fast it does this. Click on preview to bring up a color selector.</p>
+	    					<p>The selected color moves across the strip. Change the speed slider to select how fast it does this, and the length slider to change how long the segment of color is. If Full Strip is selected, the color will move until it fills up the entire strip, then go away. Click on preview to bring up a color selector.</p>
 	    				</div>
 	    			</div>
 	    			<div id="wipe-setting-speed">
 	    				<span class="lead setting-title">Speed: </span>
 	    				<input class="setting-input" id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+	    			</div>
+	    			<div id="wipe-setting-length">
+	    				<span class="lead setting-title">Length: </span>
+	    				<input class="setting-input" id="wipe-length-slider" data-slider-id='wipeLengthSlider' type="text" data-slider-min="1" data-slider-max="255" data-slider-step="1" data-slider-value="20" />
 	    			</div>
 	    			<div id="wipe-setting-red">
 	    				<span class="lead setting-title">Red Value: </span>
@@ -240,6 +244,9 @@
 	    					<input type="color" class="color-selector" id="wipe-color-selector" value="#7851A9">
 	    				</div>
 	    			</div>
+                    <div id="wipe-setting-full-strip">
+                        <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="wipe-full-strip">Full Strip</button>
+                    </div>
 	    		</div>
 	    	</div>
           <div class="col-md-4">
