@@ -66,7 +66,12 @@ $('#wipe-green-slider').slider();
 $('#wipe-blue-slider').slider();
 
 // Global effect sliders
-$('#twinkle-frequency-slider').slider();
+$('#twinkle-frequency-slider').slider({
+    formatter: function (value) {
+        return value * 100 + '%'
+    }
+});
+;
 $('#breathe-speed-slider').slider({
   formatter: function (value) {
     return value + ' cycles/s'

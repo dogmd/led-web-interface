@@ -103,7 +103,7 @@
                     </div>
                     <div id="rainbow-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input class="setting-input" id="rainbow-speed-slider" data-slider-id='rainbowSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="8" />
+                        <input class="setting-input" id="rainbow-speed-slider" data-slider-id='rainbowSpeedSlider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="8" />
                     </div>
                     <div id="rainbow-setting-solid-strip">
                         <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="rainbow-solid-strip">Solid Strip</button>
@@ -146,7 +146,7 @@
                     </div>
                     <div id="runner-setting-length">
                         <span class="lead setting-title">Length: </span>
-                        <input class="setting-input" id="runner-length-slider" data-slider-id='runnerLengthSlider' type="text" data-slider-min="1" data-slider-max="80" data-slider-step="1" data-slider-value="25" />
+                        <input class="setting-input" id="runner-length-slider" data-slider-id='runnerLengthSlider' type="text" data-slider-min="1" data-slider-max="200" data-slider-step="1" data-slider-value="25" />
                     </div>
                     <div id="runner-setting-red">
                         <span class="lead setting-title">Red Value: </span>
@@ -180,7 +180,7 @@
                     </div>
                     <div id="patriot-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input class="setting-input" id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="15" data-slider-step="1" data-slider-value="0" />
+                        <input class="setting-input" id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="0" />
                     </div>
                     <div id="patriot-setting-solid-strand">
                         <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="patriot-solid-strand">Solid Strand</button>
@@ -254,7 +254,7 @@
                   </div>
                   <div id="twinkle-setting-frequency">
                       <span class="lead setting-title">Frequency: </span>
-                      <input class="setting-input" id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.1" data-slider-value="0.5" />
+                      <input class="setting-input" id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.05" data-slider-value="0.5" />
                   </div>
               </div>
           </div>
@@ -270,7 +270,7 @@
                   </div>
                   <div id="breathe-setting-speed">
                       <span class="lead setting-title">Speed: </span>
-                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="3" data-slider-step="0.1" data-slider-value="1" />
+                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="50" data-slider-step="0.1" data-slider-value="1" />
                   </div>
               </div>
           </div>
@@ -286,11 +286,11 @@
                   </div>
                   <div id="blink-setting-off-time">
                       <span class="lead setting-title">Off time: </span>
-                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.25" />
+                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.01" data-slider-max="10" data-slider-step="0.01" data-slider-value="0.25" />
                   </div>
                   <div id="blink-setting-on-time">
                       <span class="lead setting-title">On time: </span>
-                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.1" data-slider-max="3" data-slider-step="0.1" data-slider-value="0.5" />
+                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.01" data-slider-max="10" data-slider-step="0.01" data-slider-value="0.5" />
                   </div>
               </div>
           </div>
