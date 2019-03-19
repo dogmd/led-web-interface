@@ -128,6 +128,24 @@
                         <span class="lead setting-title">Duration: </span>
                         <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="2" />
                     </div>
+                    <div id="snow-setting-red">
+                        <span class="lead setting-title">Red Value: </span>
+                        <input class="setting-input" id="snow-red-slider" data-slider-id='snowRedSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="251" />
+                    </div>
+                    <div id="snow-setting-green">
+                        <span class="lead setting-title">Green Value: </span>
+                        <input class="setting-input" id="snow-green-slider" data-slider-id='snowGreenSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="238" />
+                    </div>
+                    <div id="snow-setting-blue">
+                        <span class="lead setting-title">Blue Value: </span>
+                        <input class="setting-input" id="snow-blue-slider" data-slider-id='snowBlueSlider' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="228" />
+                    </div>
+                    <div id="snow-preview" class="v-align">
+                        <span class="lead setting-title">Preview: </span>
+                        <div class="color-selector-bg" id="snow-color-selector-bg">
+                            <input type="color" class="color-selector" id="snow-color-selector" value="#FBEEE4">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">

@@ -32,6 +32,9 @@ $('#snow-duration-slider').slider({
         return value + ' s'
     }
 });
+$('#snow-red-slider').slider();
+$('#snow-green-slider').slider();
+$('#snow-blue-slider').slider();
 
 // Patriot sliders
 $('#patriot-speed-slider').slider({

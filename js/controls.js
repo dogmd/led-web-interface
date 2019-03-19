@@ -10,6 +10,17 @@ $('.collapse-toggle').click(function () {
     }
 });
 
+// Snow color slider / preview control
+$('#snow-red-slider, #snow-green-slider, #snow-blue-slider').change(function (event) {
+    manageColor('#snow');
+});
+$('#snow-settings-toggle').click(function (event) {
+    manageColor('#snow');
+});
+$('#snow-color-selector').on('input', function (event) {
+    manageColorSliders('#snow', event);
+});
+
 // Solid color slider / preview control
 $('#solid-color-red-slider, #solid-color-green-slider, #solid-color-blue-slider').change(function (event) {
     manageColor('#solid-color');
