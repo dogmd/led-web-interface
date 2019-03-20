@@ -79,7 +79,12 @@ $('#twinkle-frequency-slider').slider({
         return value * 100 + '%'
     }
 });
-;
+$('#twinkle-duration-slider').slider({
+    formatter: function (value) {
+        return value + ' s'
+    }
+});
+
 $('#breathe-speed-slider').slider({
   formatter: function (value) {
     return value + ' cycles/s'

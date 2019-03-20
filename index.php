@@ -49,7 +49,7 @@
             <div class="col-md-6 flex">
                 <div id="brightness-control">
                     <span class="lead slider-title">Brightness: </span>
-                    <input id="brightness-slider" data-slider-id='brightnessSlider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" />
+                    <input id="brightness-slider" data-slider-id='brightnessSlider' type="text" data-slider-min="0" data-slider-max="200" data-slider-step="1" data-slider-value="50" />
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
                     </div>
                     <div id="rainbow-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input class="setting-input" id="rainbow-speed-slider" data-slider-id='rainbowSpeedSlider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="8" />
+                        <input class="setting-input" id="rainbow-speed-slider" data-slider-id='rainbowSpeedSlider' type="text" data-slider-min="0" data-slider-max="200" data-slider-step="1" data-slider-value="8" />
                     </div>
                     <div id="rainbow-setting-solid-strip">
                         <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="rainbow-solid-strip">Solid Strip</button>
@@ -126,7 +126,7 @@
                     </div>
                     <div id="snow-setting-duration">
                         <span class="lead setting-title">Duration: </span>
-                        <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="2" />
+                        <input class="setting-input" id="snow-duration-slider" data-slider-id='snowDurationSlider' type="text" data-slider-min="0.1" data-slider-max="10" data-slider-step="0.1" data-slider-value="1" />
                     </div>
                     <div id="snow-setting-red">
                         <span class="lead setting-title">Red Value: </span>
@@ -160,7 +160,7 @@
                     </div>
                     <div id="runner-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input class="setting-input" id="runner-speed-slider" data-slider-id='runnerSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+                        <input class="setting-input" id="runner-speed-slider" data-slider-id='runnerSpeedSlider' type="text" data-slider-min="1" data-slider-max="200" data-slider-step="1" data-slider-value="30" />
                     </div>
                     <div id="runner-setting-length">
                         <span class="lead setting-title">Length: </span>
@@ -198,7 +198,7 @@
                     </div>
                     <div id="patriot-setting-speed">
                         <span class="lead setting-title">Speed: </span>
-                        <input class="setting-input" id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="0" />
+                        <input class="setting-input" id="patriot-speed-slider" data-slider-id='patriotSpeedSlider' type="text" data-slider-min="0" data-slider-max="200" data-slider-step="1" data-slider-value="0" />
                     </div>
                     <div id="patriot-setting-solid-strand">
                         <button type="button" class="setting-input btn btn-outline-primary btn-block button-checkbox" id="patriot-solid-strand">Solid Strand</button>
@@ -238,7 +238,7 @@
 	    			</div>
 	    			<div id="wipe-setting-speed">
 	    				<span class="lead setting-title">Speed: </span>
-	    				<input class="setting-input" id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="30" />
+	    				<input class="setting-input" id="wipe-speed-slider" data-slider-id='wipeSpeedSlider' type="text" data-slider-min="1" data-slider-max="200" data-slider-step="1" data-slider-value="30" />
 	    			</div>
 	    			<div id="wipe-setting-length">
 	    				<span class="lead setting-title">Length: </span>
@@ -281,6 +281,10 @@
                       <span class="lead setting-title">Frequency: </span>
                       <input class="setting-input" id="twinkle-frequency-slider" data-slider-id='twinkleFrequencySlider' type="text" data-slider-min="0" data-slider-max="1" data-slider-step="0.05" data-slider-value="0.5" />
                   </div>
+		    <div id="twinkle-setting-duration">
+			<span class="lead setting-title">Duration: </span>
+			<input class="setting-input" id="twinkle-duration-slider" data-slider-id='twinkleDurationSlider' type="text" data-slider-min="0.1" data-slider-max="10" data-slider-step="0.1" data-slider-value="1" />
+		    </div>
               </div>
           </div>
           <div class="col-md-4">
@@ -295,7 +299,7 @@
                   </div>
                   <div id="breathe-setting-speed">
                       <span class="lead setting-title">Speed: </span>
-                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.5" data-slider-max="50" data-slider-step="0.1" data-slider-value="1" />
+                      <input class="setting-input" id="breathe-speed-slider" data-slider-id='breatheSpeedSlider' type="text" data-slider-min="0.1" data-slider-max="50" data-slider-step="0.1" data-slider-value="1" />
                   </div>
               </div>
           </div>
