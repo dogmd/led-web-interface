@@ -164,7 +164,7 @@
                     </div>
                     <div id="runner-setting-length">
                         <span class="lead setting-title">Length: </span>
-                        <input class="setting-input" id="runner-length-slider" data-slider-id='runnerLengthSlider' type="text" data-slider-min="1" data-slider-max="200" data-slider-step="1" data-slider-value="25" />
+                        <input class="setting-input" id="runner-length-slider" data-slider-id='runnerLengthSlider' type="text" data-slider-min="1" data-slider-max="139" data-slider-step="1" data-slider-value="25" />
                     </div>
                     <div id="runner-setting-red">
                         <span class="lead setting-title">Red Value: </span>
@@ -242,7 +242,7 @@
 	    			</div>
 	    			<div id="wipe-setting-length">
 	    				<span class="lead setting-title">Length: </span>
-	    				<input class="setting-input" id="wipe-length-slider" data-slider-id='wipeLengthSlider' type="text" data-slider-min="1" data-slider-max="255" data-slider-step="1" data-slider-value="20" />
+	    				<input class="setting-input" id="wipe-length-slider" data-slider-id='wipeLengthSlider' type="text" data-slider-min="1" data-slider-max="139" data-slider-step="1" data-slider-value="20" />
 	    			</div>
 	    			<div id="wipe-setting-red">
 	    				<span class="lead setting-title">Red Value: </span>
@@ -315,11 +315,11 @@
                   </div>
                   <div id="blink-setting-off-time">
                       <span class="lead setting-title">Off time: </span>
-                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.02" data-slider-max="10" data-slider-step="0.01" data-slider-value="0.25" />
+                      <input class="setting-input" id="blink-off-time-slider" data-slider-id='blinkOffTimeSlider' type="text" data-slider-min="0.01" data-slider-max="10" data-slider-step="0.005" data-slider-value="0.25" />
                   </div>
                   <div id="blink-setting-on-time">
                       <span class="lead setting-title">On time: </span>
-                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.02" data-slider-max="10" data-slider-step="0.01" data-slider-value="0.5" />
+                      <input class="setting-input" id="blink-on-time-slider" data-slider-id='blinkOnTimeSlider' type="text" data-slider-min="0.01" data-slider-max="10" data-slider-step="0.005" data-slider-value="0.5" />
                   </div>
               </div>
           </div>
