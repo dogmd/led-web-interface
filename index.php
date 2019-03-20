@@ -49,7 +49,7 @@
             <div class="col-md-6 flex">
                 <div id="brightness-control">
                     <span class="lead slider-title">Brightness: </span>
-                    <input id="brightness-slider" data-slider-id='brightnessSlider' type="text" data-slider-min="0" data-slider-max="200" data-slider-step="1" data-slider-value="50" />
+                    <input id="brightness-slider" data-slider-id='brightnessSlider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50" />
                 </div>
             </div>
         </div>
