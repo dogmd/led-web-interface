@@ -4,4 +4,4 @@ This is the web front end for a Raspberry Pi controlled LED strip. It provides a
 
 ## Screenshots
 ![](web_screenshot.png?raw=true)
-![](lamp_screenshot.png?raw=true)
+![](lamp_screenshot.jpg?raw=true)
